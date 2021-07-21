@@ -1,7 +1,30 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Rosario:wght@300&display=swap');
+body{
+    font-family: 'Rosario', sans-serif;
+    background: linear-gradient(to bottom, #001b1f,#032e32,#01454e)no-repeat;
+}
 header img{
     width: 100%;
 }
-.background{
-    background: linear-gradient(to bottom, rgba(0, 27, 31, 1));
+aside{
+    width: 25%; 
+    text-align: center;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
+.search{
+   width:80%;
+   font-size: 24px;
+   border-radius:7px;
+   border-color:#3EDBF0;
+   background-color: #0A0909;
+}
+h3{
+    text-align: left;
+    margin: 10%;
+    color: white;
+    font-size: 28px;
 }
