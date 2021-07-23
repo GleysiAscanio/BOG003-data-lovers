@@ -6,18 +6,23 @@ body{
 header img{
     width: 100%;
 }
+main{
+    display: flex;
+    flex-direction: row;   
+}
 aside{
-    width: 25%; 
+    position: sticky;
+    width: 35%; 
     text-align: center;
 }
 h1{
     color: white;
     text-align: center;
-    font-size: 35px;
+    font-size: 2.5em;
 }
 .search{
    width:80%;
-   font-size: 24px;
+   font-size: 150%;
    border-radius:7px;
    border-color:#3EDBF0;
    background-color: #0A0909;
@@ -28,46 +33,37 @@ h3{
     color: white;
     font-size: 28px;
 }
-button.stars{
-    background-color: transparent;
-    border-color: transparent;
-    width: 20%;
-    height: 100%;
-    box-sizing: border-box;
-    margin-right:70%;
-    cursor: pointer;
-}
-.fas.fa-star{
-    color: #E2B421;
-    border-color: #E2B421;
-    font-size: 25px;    
-}
-button.stars2{
-    background-color: transparent;
-    border-color: transparent;
-    margin-right: 65%;
-}
-button.stars3{
-    background-color: transparent;
-    border-color: transparent;
-    margin-right: 55%;
-    
-}
-button.stars4{
-    background-color: transparent;
-    border-color: transparent;
-    margin-right: 40%;
+.difficulty{
+    border-color:#3EDBF0;
+    color:#F0A500;
+    background-color:#0A0909;
+    padding:5px;
+    border-radius: 5px;
+    width: 60%;
+    font-size: 17px;
+    margin-right: 20%;
 }
 .role{
     color: #F0A500;
     background-color: #0A0909;
     border-color: #3EDBF0;
-    width: 80%;
-    font-size: 20px ;
+    width: 60%;
+    font-size: 1em ;
     font-family: 'Rosario', sans-serif;
     cursor: pointer;
     padding: 5px;
     margin: 3px;
     border-radius: 5px;
-
+    margin-right: 20%;
+}
+.champions {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    padding:10%;
+    
+    
 }
