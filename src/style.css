@@ -12,7 +12,7 @@ main{
 }
 aside{
     position: sticky;
-    width: 35%; 
+    max-width: 330px; 
     text-align: center;
 }
 h1{
@@ -60,10 +60,27 @@ h3{
     display:flex;
     flex-direction: row;
     flex-wrap:wrap;
-    justify-content: space-around;
     height: 100%;
     width: 100%;
-    padding:10%;
-    
-    
+    padding-top: 40px;
+  
+}
+.champion_container{
+    background-color: #0A0909;
+    border-radius: 5px;
+    margin:7px;
+}
+.champion_image{
+  margin: 10px;
+  object-fit: cover;
+  width: 134px;
+  height:139px;
+  margin-bottom: 0px;
+}
+.champion_name{
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  margin: 0px;
+  margin-bottom: 9px;
 }
