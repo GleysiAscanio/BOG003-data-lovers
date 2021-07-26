@@ -11,9 +11,12 @@ main{
     flex-direction: row;   
 }
 aside{
-    position: sticky;
     max-width: 330px; 
     text-align: center;
+}
+.sticky{
+    position: sticky;
+    top:20px;
 }
 h1{
     color: white;
@@ -63,7 +66,6 @@ h3{
     height: 100%;
     width: 100%;
     padding-top: 40px;
-  
 }
 .champion_container{
     background-color: #0A0909;
