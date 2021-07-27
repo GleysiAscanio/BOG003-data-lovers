@@ -6,13 +6,14 @@ Object.entries(values).forEach(([key, value]) =>{
     let containerBox=`<div class="champion_container">
 <img class="champion_image" src="${value.splash}">
 <p class="champion_name">${value.name}</p>
-</div>
 </div>`
 const champions=document.querySelector(".champions");
 champions.append(document.createRange().createContextualFragment(containerBox))
 
 });
 
+const figther=document.querySelector("#fighters");
+figther.addEventListener("click",filter)
 
 
 

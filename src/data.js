@@ -8,3 +8,6 @@ export const filterData = () => {
 export const anotherExample = () => {
   return 'OMG';
 };
+export const figther=()=>{
+  return "Peleadores"
+ };
