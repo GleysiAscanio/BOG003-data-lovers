@@ -48,9 +48,9 @@ function filterChampions(event) {
   });
 };
 
-function changeTittleRole(){
+// function changeTittleRole(){
 
-};
+// };
 
 
 
