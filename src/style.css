@@ -3,6 +3,12 @@ body{
     font-family: 'Rosario', sans-serif;
     background: linear-gradient(to bottom, #001b1f,#032e32,#01454e)no-repeat;
 }
+.hide{
+    display:none;
+}
+.show{
+    display: block;
+}
 header img{
     width: 100%;
 }
@@ -24,13 +30,11 @@ h1{
     font-size: 2.5em;
 }
 .search{
-   width:80%;
+   width:85%;
    font-size: 150%;
    border-radius:7px;
    border-color:#3EDBF0;
    background-color: #0A0909;
-   overflow: hidden;
-   display: block;
    color: white;
 }
 h3{
@@ -74,12 +78,13 @@ h3{
     background-color: #0A0909;
     border-radius: 5px;
     margin:7px;
+    cursor: pointer;
 }
 .champion_image{
   margin: 10px;
   object-fit: cover;
-  width: 134px;
-  height:139px;
+  width: 154px;
+  height:159px;
   margin-bottom: 0px;
 }
 .champion_name{
@@ -88,4 +93,9 @@ h3{
   font-weight: bold;
   margin: 0px;
   margin-bottom: 9px;
+}
+.championRole{
+    color: #F0A500;
+    font-family: 'Rosario', sans-serif;
+    padding-top: 40px;
 }

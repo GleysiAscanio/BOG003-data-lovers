@@ -1,12 +1,12 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterData, anotherExample } from '../src/data.js';
 
 
 describe('filterData', () => {
-  it('is a function', () => {
+  it('Es una función que filtra la data según un parámetro', () => {
     expect(typeof filterData).toBe('function');
   });
 
-  it('returns `example`', () => {
+  it('deberia retornar ', () => {
     expect(example()).toBe('example');
   });
 });
