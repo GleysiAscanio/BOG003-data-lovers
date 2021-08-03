@@ -54,7 +54,7 @@ for(let i = 1; i <= 10; i++) {
     let opcion = document.createElement("option");
     opcion.value = i;
     opcion.innerText = ("Nivel " + i);
-    selectDifficulty.appendChild(opcion); 
+    selectDifficulty.append(opcion); 
 }   
 
 
@@ -76,7 +76,7 @@ const userSearch = ()=>{
         }
     }
         if(resultado.innerHTML === ""){
-            resultado.innerHTML += `<h2>No Encontrado</h2>`
+            resultado.innerHTML += `<h2>No encontrado</h2>`
         }
 }
 

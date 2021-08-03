@@ -3,12 +3,7 @@ body{
     font-family: 'Rosario', sans-serif;
     background: linear-gradient(to bottom, #001b1f,#032e32,#01454e)no-repeat;
 }
-.hide{
-    display:none;
-}
-.show{
-    display: block;
-}
+
 header img{
     width: 100%;
 }
@@ -46,6 +41,12 @@ h3{
     color: white;
     font-size: 28px;
 }
+h2{
+    text-align: center;
+    margin-left: 15%;
+    color: white;
+    font-size: 28px;
+}
 .difficulty{
     border-color:#3EDBF0;
     color:#F0A500;
@@ -53,7 +54,7 @@ h3{
     padding:5px;
     border-radius: 5px;
     width: 40%;
-    font-size: 17px;
+    font-size: 1em;
     margin-right: 3%;
 }
 
@@ -64,7 +65,7 @@ h3{
     padding:5px;
     border-radius: 5px;
     width: 40%;
-    font-size: 17px;
+    font-size: 1em;
     margin-right: 3%;
 }
 
