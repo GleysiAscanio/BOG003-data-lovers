@@ -11,17 +11,33 @@ export const filterData= (data, role)=>{
 // El tercer parámetro, sortOrder, indica si se quiere ordenar de manera ascendente o 
 // descendente.*/
 
-export const sortByNames = (data, sortBy)=>{
-  let orderChampions = data.sort((a,b) => a.name > b.name);
-  let reverseChampions = data.reverse();
-  if(sortBy === "ZA"){
-    return reverseChampions;
+// export const sortByNames = (data, sortBy)=>{
+//   let orderChampions = data.sort((a,b) => a.name > b.name);
+//   let reverseChampions = data.reverse();
+//   if(sortBy === "ZA"){
+//     return reverseChampions;
+//   }
+//   if(sortBy === "AZ")
+//     return orderChampions;
+// };
+export const sortByNames = (data, select) => {
+
+  if (select === "AZ") {
+    const orderData = data.sort((a, b) => {
+      if (a.name < b.name) { return -1; }
+      if (a.name > b.name) { return 1; }
+      return 0;
+    })
   }
-  if(sortBy === "AZ")
-    return orderChampions;
+  if (select === "ZA") {
+    const orderData = data.sort((a, b) => {
+      if (a.name > b.name) { return -1; }
+      if (a.name < b.name) { return 1; }
+      return 0;
+    })
+  }
 };
-
-
+  
 // /*función compute o calcular, nos permitirá hacer cálculos estadísticos básicos para ser mostrados de acuerdo
 //  a la data proporcionada.*/
 
