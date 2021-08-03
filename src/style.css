@@ -19,11 +19,14 @@ main{
 aside{
     max-width: 330px; 
     text-align: center;
+    
 }
 .sticky{
-    position: sticky;
+    position: sticky; 
     top:20px;
 }
+
+
 h1{
     color: white;
     text-align: center;
@@ -39,7 +42,7 @@ h1{
 }
 h3{
     text-align: left;
-    margin: 10%;
+    margin-left: 15%;
     color: white;
     font-size: 28px;
 }
@@ -49,10 +52,22 @@ h3{
     background-color:#0A0909;
     padding:5px;
     border-radius: 5px;
-    width: 60%;
+    width: 40%;
     font-size: 17px;
-    margin-right: 20%;
+    margin-right: 3%;
 }
+
+.organized{
+    border-color:#3EDBF0;
+    color:#F0A500;
+    background-color:#0A0909;
+    padding:5px;
+    border-radius: 5px;
+    width: 40%;
+    font-size: 17px;
+    margin-right: 3%;
+}
+
 .role{
     color: #F0A500;
     background-color: #0A0909;
@@ -64,7 +79,7 @@ h3{
     padding: 5px;
     margin: 3px;
     border-radius: 5px;
-    margin-right: 20%;
+    margin-right: 3%;
 }
 .champions {
     display:flex;
