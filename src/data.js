@@ -11,7 +11,14 @@ export const filterData= (data, role)=>{
 // El tercer parámetro, sortOrder, indica si se quiere ordenar de manera ascendente o 
 // descendente.*/
 
-// sortData(data, sortBy, sortOrder);
+export const sortByNames = (data, select)=>{
+  let orderChampions = data.sort((a,b) => a.name - b.name);
+  if(select === "ZA"){
+    return orderChampions.reverse();
+  }
+  if(select === "AZ")
+    return orderChampions;
+};
 
 
 // /*función compute o calcular, nos permitirá hacer cálculos estadísticos básicos para ser mostrados de acuerdo

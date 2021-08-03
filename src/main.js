@@ -1,4 +1,4 @@
-import {filterData} from './data.js';
+import {filterData, sortByNames} from './data.js';
 import data from './data/lol/lol.js';
 
 
@@ -9,10 +9,13 @@ const btnMage = document.querySelector("#Mage");
 const btnAssassin = document.querySelector("#Assassin");
 const btnTank = document.querySelector("#Tank");
 const btnSupport= document.querySelector("#Support");
+const selectDifficulty = document.getElementById("difficulty")
+const inputSearch = document.getElementById("search");
+const resultado = document.getElementById("container");
+const selectOrganized = document.getElementById("organized");
 
-// Mostrar toda la página
+// Mostrar toda la página. #1.Historia de Usuario
 window.onload=load;
-
 
 function load(){
     Object.entries(dataLol).forEach(([key, value]) =>{
@@ -24,8 +27,28 @@ function load(){
     champions.append(document.createRange().createContextualFragment(containerBox))
 })
 };
+//Filtro de Campeones en el Input de Busqueda. #3 Historia de Usuario.
 
-//Filtra los Campeones por su Roles
+const userSearch = ()=>{
+    resultado.innerHTML = "";
+    const valueSearch = inputSearch.value.toLowerCase();
+    for(let value of dataLol){
+        let nameChampions = value.name.toLowerCase();
+        if(nameChampions.indexOf(valueSearch) !== -1){
+            resultado.innerHTML +=`<div class="champion_container">
+            <img class="champion_image" src="${value.splash}">
+            <p class="champion_name">${value.name}</p>
+            </div>`
+        }
+    }
+        if(resultado.innerHTML === ""){
+            resultado.innerHTML += `<h2>No Encontrado</h2>`
+        }
+}
+
+inputSearch.addEventListener("keyup", userSearch);
+
+//Filtra los Campeones por sus Roles. #4 Historia de Usuario.
 
 btnFighters.addEventListener("click", filterChampions);
 btnMarksmans.addEventListener("click", filterChampions);
@@ -48,8 +71,16 @@ function filterChampions(event) {
   });
 };
 
+//Select para Ordenar campeones AZ - ZA
+
+selectOrganized.addEventListener("change", (e) => {
+    resultado.innerHTML = ""
+    load(sortByNames(dataLol,selectOrganized.value))
+});
+
+
 //*Select de Dificultad generado dinamicamente
-const selectDifficulty = document.getElementById("difficulty")
+
 for(let i = 1; i <= 10; i++) {
     let opcion = document.createElement("option");
     opcion.value = i;
@@ -58,28 +89,7 @@ for(let i = 1; i <= 10; i++) {
 }   
 
 
-//Filtro de Campeones en el Input de Busqueda
 
-const inputSearch = document.getElementById("search");
-const resultado = document.getElementById("container");
 
-const userSearch = ()=>{
-    resultado.innerHTML = "";
-    const valueSearch = inputSearch.value.toLowerCase();
-    for(let value of dataLol){
-        let nameChampions = value.name.toLowerCase();
-        if(nameChampions.indexOf(valueSearch) !== -1){
-            resultado.innerHTML +=`<div class="champion_container">
-            <img class="champion_image" src="${value.splash}">
-            <p class="champion_name">${value.name}</p>
-            </div>`
-        }
-    }
-        if(resultado.innerHTML === ""){
-            resultado.innerHTML += `<h2>No Encontrado</h2>`
-        }
-}
-
-inputSearch.addEventListener("keyup", userSearch);
 
 
