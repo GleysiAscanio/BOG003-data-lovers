@@ -3,6 +3,7 @@
 body{
     font-family: 'Rosario', sans-serif;
     background: linear-gradient(to bottom, #001b1f,#032e32,#01454e)no-repeat;
+
 }
 
 header img{
@@ -14,19 +15,17 @@ main{
 }
 aside{
     max-width: 330px; 
-    text-align: center;
+    text-align: center;   
 }
 .sticky{
-    position: sticky; 
-    top:20px;    
-    overflow-y: auto; 
+    top:20px;   
 }
 
 
 h1{
     color: white;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.3em;
 }
 .search{
    width:85%;
@@ -90,7 +89,27 @@ h2{
     height: 100%;
     width: 100%;
     padding-top: 40px;
+    max-height: 880px;
+    overflow-y: scroll;
 }
+.champions::-webkit-scrollbar{
+    width: 10px;
+}
+.champions::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color:#0e474e ;
+}
+.champions::-webkit-scrollbar-thumb:hover{
+    background-color: #1b5c64;
+}
+.champions::-webkit-scrollbar-thumb:active{
+    background:#346a74 ;
+}
+.champions::-webkit-scrollbar-track:hover{
+    background: #66a3ad;
+    border-radius: 10px;
+}
+  
 .champion_container{
     background-color: #0A0909;
     border-radius: 5px;
