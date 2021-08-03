@@ -11,12 +11,13 @@ export const filterData= (data, role)=>{
 // El tercer parámetro, sortOrder, indica si se quiere ordenar de manera ascendente o 
 // descendente.*/
 
-export const sortByNames = (data, select)=>{
-  let orderChampions = data.sort((a,b) => a.name - b.name);
-  if(select === "ZA"){
-    return orderChampions.reverse();
+export const sortByNames = (data, sortBy)=>{
+  let orderChampions = data.sort((a,b) => a.name > b.name);
+  let reverseChampions = data.reverse();
+  if(sortBy === "ZA"){
+    return reverseChampions;
   }
-  if(select === "AZ")
+  if(sortBy === "AZ")
     return orderChampions;
 };
 
