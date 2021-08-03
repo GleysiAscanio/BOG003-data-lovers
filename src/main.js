@@ -85,11 +85,30 @@ for(let i = 1; i <= 10; i++) {
     let opcion = document.createElement("option");
     opcion.value = i;
     opcion.innerText = ("Nivel " + i);
-    selectDifficulty.appendChild(opcion); 
+    selectDifficulty.append(opcion); 
 }   
 
 
 
+<<<<<<< HEAD
+=======
+const userSearch = ()=>{
+    resultado.innerHTML = "";
+    const valueSearch = inputSearch.value.toLowerCase();
+    for(let value of dataLol){
+        let nameChampions = value.name.toLowerCase();
+        if(nameChampions.indexOf(valueSearch) !== -1){
+            resultado.innerHTML +=`<div class="champion_container">
+            <img class="champion_image" src="${value.splash}">
+            <p class="champion_name">${value.name}</p>
+            </div>`
+        }
+    }
+        if(resultado.innerHTML === ""){
+            resultado.innerHTML += `<h2>No encontrado</h2>`
+        }
+}
+>>>>>>> 9dd4bc7b40c8bfb36467b8c97d85b3b8817d3672
 
 
 
