@@ -1,6 +1,4 @@
-import {
-  filterData
-} from './data.js';
+import {filterData} from './data.js';
 import data from './data/lol/lol.js';
 
 
@@ -23,7 +21,6 @@ function load(){
     </div>`
     const champions=document.querySelector(".champions");
     champions.append(document.createRange().createContextualFragment(containerBox))
-    console.log("ok")
 })
 };
 
