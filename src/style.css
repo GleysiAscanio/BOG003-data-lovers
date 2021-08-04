@@ -89,7 +89,7 @@ h2{
     height: 100%;
     width: 100%;
     padding-top: 40px;
-    max-height: 880px;
+    max-height: 2000px;
     overflow-y: scroll;
 }
 .champions::-webkit-scrollbar{
