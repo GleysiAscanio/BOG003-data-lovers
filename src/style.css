@@ -2,7 +2,7 @@
 /*   #2.Historia de Usuario */
 body{
     font-family: 'Rosario', sans-serif;
-    background: linear-gradient(to bottom, #001b1f,#032e32,#01454e)no-repeat;
+    background: linear-gradient(to bottom, #012227,#033338,#02545f)no-repeat;
 
 }
 
@@ -65,7 +65,7 @@ h2{
     padding:5px;
     border-radius: 5px;
     width: 40%;
-    font-size: 1em;
+    font-size: 1.2em;
     margin-right: 3%;
 }
 
@@ -74,7 +74,7 @@ h2{
     background-color: #0A0909;
     border-color: #3EDBF0;
     width: 60%;
-    font-size: 1em ;
+    font-size: 1.2em ;
     font-family: 'Rosario', sans-serif;
     cursor: pointer;
     padding: 5px;
@@ -89,7 +89,7 @@ h2{
     height: 100%;
     width: 100%;
     padding-top: 40px;
-    max-height: 880px;
+    max-height: 2000px;
     overflow-y: scroll;
 }
 .champions::-webkit-scrollbar{

@@ -19,12 +19,14 @@ window.onload=load;
 
 function load(){
     Object.entries(dataLol).forEach(([key, value]) =>{
-        let containerBox=`<div class="champion_container">
-    <img class="champion_image" src="${value.splash}">
-    <p class="champion_name">${value.name}</p>
+        let containerBox=`<div id="${value.name}"class="champion_container">
+    <img id="${value.name}" class="champion_image" src="${value.splash}">
+    <p id="${value.name}" class="champion_name">${value.name}</p>
     </div>`
     const champions=document.querySelector(".champions");
     champions.append(document.createRange().createContextualFragment(containerBox))
+    const championsName=document.querySelector("#container")
+    championsName.addEventListener("click", cardsNames)  
 })
 };
 //Filtro de Campeones en el Input de Busqueda. #3 Historia de Usuario.
@@ -35,9 +37,9 @@ const userSearch = ()=>{
     for(let value of dataLol){
         let nameChampions = value.name.toLowerCase();
         if(nameChampions.indexOf(valueSearch) !== -1){
-            resultado.innerHTML +=`<div class="champion_container">
-            <img class="champion_image" src="${value.splash}">
-            <p class="champion_name">${value.name}</p>
+            resultado.innerHTML +=`<div id="${value.name}" class="champion_container">
+            <img id="${value.name}" class="champion_image" src="${value.splash}">
+            <p id="${value.name}"class="champion_name">${value.name}</p>
             </div>`
         }
     }
@@ -62,9 +64,9 @@ function filterChampions(event) {
     champions.innerHTML=""
     let datafiltered = filterData(dataLol, event.target.id)
     Object.entries(datafiltered).forEach(([key, value]) => {
-    let containerBox = `<div class="champion_container">
-    <img class="champion_image" src="${value.splash}">
-    <p class="champion_name">${value.name}</p>
+    let containerBox = `<div id="${value.name}" class="champion_container">
+    <img id="${value.name}" class="champion_image" src="${value.splash}">
+    <p id="${value.name}"class="champion_name">${value.name}</p>
     </div>`
     const champions = document.querySelector(".champions");
     champions.append(document.createRange().createContextualFragment(containerBox))
@@ -88,6 +90,9 @@ for(let i = 1; i <= 10; i++) {
     selectDifficulty.append(opcion); 
 }   
 
+function cardsNames(e){
+    filterNames(dataLol,e.target.id)
+}
 
 
 
