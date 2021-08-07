@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/e139f16e74.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/e139f16e74.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-      <img src="BannerPagina.png" alt="">
+      <img src="BannerPagina.png" alt="" />
     </header>
     <main>
       <aside>
         <div class="sticky">
-       <h1>¡Busca a tu <br> campeón <br> favorito!</h1>
-       <input class="search" id="search" type="search" autocomple="off"placeholder="Buscar" maxlength="20">
-       <h3>Nivel de dificultad</h3>
-        <select class="difficulty" name="Dificultad" id="difficulty">
-          <option disabled selected>Selecciona</option>
-        </select>
-        <h3>Organizar por</h3>
-        <select class="organized" name="organized" id="organized">
-          <option disabled selected>Selecciona</option>
-          <option value="AZ">A-Z</option>
-          <option value="ZA">Z-A</option>
-        </select>
-        <h3>Clasificación por rol</h3>
-        <button class="role" id="Fighter">LUCHADORES</button>
-        <button class="role" id="Marksman">TIRADORES</button>
-        <button class="role" id="Mage"> MAGOS </button>
-        <button class="role" id="Assassin"> ASESINOS </button>
-        <button class="role" id="Tank"> TANQUES </button>
-        <button class="role" id="Support"> SOPORTE </button>
-      </div>
+          <h1>
+            ¡Busca a tu <br />
+            campeón <br />
+            favorito!
+          </h1>
+          <input
+            class="search"
+            id="search"
+            type="search"
+            autocomple="off"
+            placeholder="Buscar"
+            maxlength="20"
+          />
+          <h3>Nivel de dificultad</h3>
+          <select class="difficulty" name="Dificultad" id="difficulty">
+            <option disabled selected>Selecciona</option>
+          </select>
+          <h3>Organizar por</h3>
+          <select class="organized" name="organized" id="organized">
+            <option disabled selected>Selecciona</option>
+            <option value="AZ">A-Z</option>
+            <option value="ZA">Z-A</option>
+          </select>
+          <h3>Clasificación por rol</h3>
+          <button class="role" id="Fighter">LUCHADORES</button>
+          <button class="role" id="Marksman">TIRADORES</button>
+          <button class="role" id="Mage">MAGOS</button>
+          <button class="role" id="Assassin">ASESINOS</button>
+          <button class="role" id="Tank">TANQUES</button>
+          <button class="role" id="Support">SOPORTE</button>
+        </div>
       </aside>
-      <div class="champions" id="container">
+      <div class="champions" id="container"></div>
+      <div class="modalContainer" id="modalContainer">
       </div>
-      </main>
-    <footer>
-
-    </footer>
+    </main>
+    
+    <footer></footer>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>

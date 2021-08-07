@@ -7,14 +7,14 @@ export const filterData= (data, role)=>{
 export const sortByNames = (data, select) => {
 
   if (select === "AZ") {
-    const orderData = data.sort((a, b) => {
+      data.sort((a, b) => {
       if (a.name < b.name) { return -1; }
       if (a.name > b.name) { return 1; }
       return 0;
     })
   }
   if (select === "ZA") {
-    const orderData = data.sort((a, b) => {
+      data.sort((a, b) => {
       if (a.name > b.name) { return -1; }
       if (a.name < b.name) { return 1; }
       return 0;
@@ -25,7 +25,7 @@ export const sortByNames = (data, select) => {
 // Llamado a tarjetas
 export const filterNames= (data, name)=>{
   let dataLol= data.filter(names=> names.name.includes(name))
-   console.log(dataLol)
+    return dataLol
 
  };
 /*función compute o calcular, nos permitirá hacer cálculos estadísticos básicos para ser mostrados de acuerdo

@@ -5,7 +5,12 @@ body{
     background: linear-gradient(to bottom, #012227,#033338,#02545f)no-repeat;
 
 }
-
+.show{
+    display: flex !important;
+}
+.hide{
+    display: none;
+}
 header img{
     width: 100%;
 }
@@ -89,7 +94,7 @@ h2{
     height: 100%;
     width: 100%;
     padding-top: 40px;
-    max-height: 2000px;
+    max-height: 2100px;
     overflow-y: scroll;
 }
 .champions::-webkit-scrollbar{
@@ -134,4 +139,74 @@ h2{
     color: #F0A500;
     font-family: 'Rosario', sans-serif;
     padding-top: 40px;
+}
+.modalContainer{
+    position: fixed;
+    background: #00000091;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
+.modalCard{
+    display: flex;
+    padding: 10px;
+    background: #012227;
+    border-radius: 10px;
+    border: solid 2px;
+    border-color:#3edbf06b;
+    max-width: 1200px;
+}
+.modalImg{
+    width: 60%;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
+    border-radius: 10px;
+    border:solid 3px;
+    border-color: #000000;
+}
+.closeModal{
+    text-align: right;
+    box-sizing: border-box;
+}
+.closeModal img{
+    width: 35px;
+    cursor: pointer;
+}
+.modalText{
+    width: 40%;
+    padding: 25px;
+}
+.nameCard{
+    color:#F0A500;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em ;
+    margin-top:5px;
+}
+.tittleCard{
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.descriptionCard{
+    color: white;
+    text-align: justify;
+}
+.listStats{
+    color: white;
+    list-style: none;
+}
+.listStats img{
+    width: 32px;
+    height: 32px;
 }
