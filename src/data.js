@@ -23,7 +23,7 @@ export const sortByNames = (data, select) => {
 };
 
 // Llamado a tarjetas
-export const filterNames= (data, name)=>{
+export const filterCards= (data, name)=>{
   let dataLol= data.filter(names=> names.name.includes(name))
     return dataLol
 
