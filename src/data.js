@@ -26,8 +26,12 @@ export const sortByNames = (data, select) => {
 export const filterCards= (data, name)=>{
   let dataLol= data.filter(names=> names.name.includes(name))
     return dataLol
-
  };
+
+ export const levelDifficulty= (data, select)=>{
+  let dataLol= data.filter(difficulty=> difficulty.info.difficulty==select)
+   return dataLol
+ }
 /*función compute o calcular, nos permitirá hacer cálculos estadísticos básicos para ser mostrados de acuerdo
  a la data proporcionada.*/
 
