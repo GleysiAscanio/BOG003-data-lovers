@@ -83,7 +83,7 @@ function filterChampions(event) {
 
 selectOrganized.addEventListener("change", () => {
   resultado.innerHTML = ""
-  load(sortByNames(dataLol, selectOrganized.value))
+  load(sortByNames(dataLol, e.selectOrganized.value))
 });
 
 
