@@ -1,7 +1,7 @@
 import {
   filterData,
   sortByNames,
-  filterNames
+  filterCards
 } from './data.js';
 import data from './data/lol/lol.js';
 
@@ -34,7 +34,7 @@ function load() {
     const championsName = document.querySelector("#container")
     championsName.addEventListener("click", cardsNames)
   })
-};
+}
 //Filtro de Campeones en el Input de Busqueda. #3 Historia de Usuario.
 
 const userSearch = () => {
@@ -69,7 +69,7 @@ function filterChampions(event) {
   const champions = document.querySelector(".champions");
   champions.innerHTML = ""
   let datafiltered = filterData(dataLol, event.target.id)
-  Object.entries(datafiltered).forEach(([key, value]) => {
+  Object.entries(datafiltered).forEach(([_, value]) => {
     let containerBox = `<div id="${value.name}" class="champion_container">
     <img id="${value.name}" class="champion_image" src="${value.splash}">
     <p id="${value.name}"class="champion_name">${value.name}</p>
@@ -77,11 +77,11 @@ function filterChampions(event) {
     const champions = document.querySelector(".champions");
     champions.append(document.createRange().createContextualFragment(containerBox))
   });
-};
+}
 
 //Select para Ordenar campeones AZ - ZA
 
-selectOrganized.addEventListener("change", (e) => {
+selectOrganized.addEventListener("change", () => {
   resultado.innerHTML = ""
   load(sortByNames(dataLol, selectOrganized.value))
 });
@@ -96,11 +96,12 @@ for (let i = 1; i <= 10; i++) {
   selectDifficulty.append(opcion);
 }
 
+//*Creacion de Tarjetas. #6 Historia de Usuario 
 function cardsNames(e) {
     let cardFilter =[]
     modal.innerHTML=""
   if (e.target.id != "container") {
-     cardFilter= filterNames(dataLol, e.target.id)
+     cardFilter= filterCards(dataLol, e.target.id)
     modal.classList.add("show")
     let card=`<div class="modalCard" id="modalCard">
     <div class="modalImg" style="background-image: url('${cardFilter[0].splash}');">

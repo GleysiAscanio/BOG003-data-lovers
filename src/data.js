@@ -1,9 +1,9 @@
-
+//filtrado de Roles
 export const filterData= (data, role)=>{
- let dataLol= data.filter(tag=> tag.tags.includes(role))
+ let dataLol= data.filter(tag=> tag["tags"].includes(role))
   return dataLol
 };
-
+//Orgqanizacion AZ - ZA
 export const sortByNames = (data, select) => {
 
   if (select === "AZ") {
@@ -23,7 +23,7 @@ export const sortByNames = (data, select) => {
 };
 
 // Llamado a tarjetas
-export const filterNames= (data, name)=>{
+export const filterCards= (data, name)=>{
   let dataLol= data.filter(names=> names.name.includes(name))
     return dataLol
 
