@@ -3,7 +3,7 @@
 body{
     font-family: 'Rosario', sans-serif;
     background: linear-gradient(to bottom, #012227,#033338,#02545f)no-repeat;
-    height:100vh ;
+    
 
 }
 .show{
@@ -16,6 +16,7 @@ header img{
     width: 100%;
 }
 main{
+    min-height:100vh;
     display: flex;
     flex-direction: row;
     
