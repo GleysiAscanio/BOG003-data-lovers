@@ -36,21 +36,7 @@ function load() {
   })
   const championsName = document.querySelector("#container")
   championsName.addEventListener("click", cardsNames)
-  // Filtrado por dificultad
-  const difficulty = document.getElementById("difficulty")
-  difficulty.addEventListener("change", (e) => {
-    resultado.innerHTML=""
-    let datafiltered = levelDifficulty(dataLol, e.target.value)
-    Object.entries(datafiltered).forEach(([key, value]) => {
-      let containerBox = `<div id="${value.name}" class="champion_container">
-    <img id="${value.name}" class="champion_image" src="${value.splash}">
-    <p id="${value.name}"class="champion_name">${value.name}</p>
-    </div>`
-      const champions = document.querySelector(".champions");
-      champions.append(document.createRange().createContextualFragment(containerBox))
-    });
-  })
-}
+  
 //Filtro de Campeones en el Input de Busqueda. #3 Historia de Usuario.
 
 const userSearch = () => {
@@ -103,7 +89,7 @@ selectOrganized.addEventListener("change", () => {
 });
 
 
-//*Select de Dificultad generado dinamicamente
+//Select de Dificultad generado dinamicamente
 
 for (let i = 1; i <= 10; i++) {
   let opcion = document.createElement("option");
@@ -112,6 +98,22 @@ for (let i = 1; i <= 10; i++) {
   selectDifficulty.append(opcion);
 }
 
+
+// Filtrado por Dificultad. #5 Historia de Usuario
+const difficulty = document.getElementById("difficulty")
+difficulty.addEventListener("change", (e) => {
+  resultado.innerHTML=""
+  let datafiltered = levelDifficulty(dataLol, e.target.value)
+  Object.entries(datafiltered).forEach(([key, value]) => {
+    let containerBox = `<div id="${value.name}" class="champion_container">
+  <img id="${value.name}" class="champion_image" src="${value.splash}">
+  <p id="${value.name}"class="champion_name">${value.name}</p>
+  </div>`
+    const champions = document.querySelector(".champions");
+    champions.append(document.createRange().createContextualFragment(containerBox))
+  });
+})
+}
 
 //*Creacion de Tarjetas. #6 Historia de Usuario 
 function cardsNames(e) {

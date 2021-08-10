@@ -1,4 +1,4 @@
-import { filterData, sortByNames, filterCards } from '../src/data.js';
+import { filterData, sortByNames, filterCards, levelDifficulty } from '../src/data.js';
 
 
 describe('filterData', () => {
@@ -11,15 +11,21 @@ describe('filterData', () => {
   })
 });
 
-describe('sortByNames', ()=> {
-  it('Es una funcion que ordena la data alfabeticamente y al inverso', ()=>{
-    expect(typeof sortByNames).tobe('function');
+ describe('sortByNames', () =>{
+  it('Es una función que ordena la data alfabeticamente y al inverso', ()=>{
+    expect(typeof sortByNames).toBe('function');
   })
-  let expectNames = [{name: "Aatrox"},{name: "Braum"},{name: "Caitlyn"}];
-  it('deberia restornar la data de forma ascendente', ()=> {
-    expect(sortByNames(expectNames,"Aatrox")).toStrictEqual(expectNames)
+  let  expectOrderNames=[{name:"Aatrox"},{name:"Brand"},{name:"Camille"}];
+  it('deberia retornar el arreglo de campeones en orden alfabetico',()=>{
+   expect(sortByNames(expectOrderNames,"AZ")).toStrictEqual([{name:"Aatrox"},{name:"Brand"},{name:"Camille"}]) 
   })
-});
+  let  expectReverseNames=[{name:"Zyra"},{name:"Yorick"},{name:"Xin Zhao"}];
+  it('deberia retornar el arreglo de campeones en orden alfabetico',()=>{
+   expect(sortByNames(expectReverseNames,"ZA")).toEqual(expectReverseNames) 
+  })
+ });
+
+
 
 describe('filterCards', () => {
   it('Es una funcion que filtra la data que va en las tarjetas', () => {
@@ -29,4 +35,15 @@ describe('filterCards', () => {
   it('deberia retornar la informacion solicitada de la data', () => {
     expect(filterCards(expectArrayNames,"Ahri")).toEqual([{name: "Ahri", title: "the Nine-Tailed Fox"}]);
   })
+});
+
+
+describe('levelDifficulty', () => {
+  it('Es una Funcion que filtra la data que va en las tarjetas', ()=>{
+    expect(typeof levelDifficulty).toBe('function');
+  });
+  it('Deberia retornar la difficultad de los campeones', ()=> {
+    let expectDifficulty = [{info:{difficulty: 1}},{info:{difficulty: 2}}, {info:{difficulty: 3}}];
+    expect(levelDifficulty(expectDifficulty, 1)).toStrictEqual([{info:{difficulty: 1}}])
+  });
 });

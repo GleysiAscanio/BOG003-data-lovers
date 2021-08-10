@@ -16,7 +16,8 @@ header img{
 }
 main{
     display: flex;
-    flex-direction: row;   
+    flex-direction: row;  
+    min-height: 100vh; 
 }
 aside{
     max-width: 330px; 
