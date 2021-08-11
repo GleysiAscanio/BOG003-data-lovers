@@ -18,13 +18,8 @@ header img{
 main{
     min-height:100vh;
     display: flex;
-<<<<<<< HEAD
     flex-direction: row;  
     min-height: 100vh; 
-=======
-    flex-direction: row;
-    
->>>>>>> f2217304a5497a897b5717f2742acce5bf635783
 }
 aside{
     max-width: 330px; 

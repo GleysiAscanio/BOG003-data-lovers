@@ -69,16 +69,119 @@ Basadas en estas respuestas construimos el prototipo inicial en papel y seguidam
 
 Diseños en papel
 ![](src/imgREADME/DiseñoPapel1.jpeg)
-![](src/imgREADME/TargetaPapel1.jpeg)
-![](src/imgREADME/DiseñoPApel2.jpeg)
+![](src/imgREADME/TarjetaPapel1.jpeg)
+![](src/imgREADME/DiseñoPapel2.jpeg)
 
 Desktop
+
 ![DesktopInicial](src/imgREADME/Inicio1.PNG)
-![TarjetaInicial](src/imgREADME/Tarjeta!.PNG)
+![TarjetaInicial](src/imgREADME/Tarjeta1.PNG)
 
 Dispositivos moviles
+
 ![MovilInicio](src/imgREADME/MovilInicio.PNG)
+
 ![MoilTarjetaInicio](src/imgREADME/MovilTarjetaInicio.PNG)
+
+
+## Historias de usuario
+
+### H.U 1
+### "Yo como usuario quiero ver a todos los campeones con su respectivo nombre e imagen en la página principal para mejor visualización del contenido"
+
+#### Criterios de aceptación
+* Visualizar a todos los campeones en la pantalla principal
+* Cada campeón debe tener su respectivo nombre
+* Ver el contenido de forma ordenada
+* Poder ver el contenido en desktop, tablet y celular
+
+#### Definición de terminado
+* Utilizar flexbox para la organización del contenido
+* Hacer el llamado de la data para mostrar las imagenes
+* Hacer llamado de la data que al mostrar las imágenes muestre los nombres
+* Conseguir un diseño responsive de la página
+ 
+### H.U 2
+### "Yo como usuario del juego quiero ver la interfaz con colores oscuros para poder tener una relación más directa del juego además de la comodidad visual que esto genera"
+
+#### Criterios de aceptación
+* Interfaz de colores oscuros
+* Poder asociar visualmente la aplicación web al juego
+* Contraste entre colores
+
+#### Definición de terminado
+* Elegir la paleta de colores
+* Determinar el background
+* Determinar el color del header
+* Determinar el color de los botones
+
+### H.U 3 
+### "Yo como usuario quiero una barra de búsqueda para poder acceder a la información de un campeón" 
+
+#### Criterios de aceptación
+* Poder tener una barra de búsqueda
+* Barra visible en todo momento
+* Buscar campeones con facilidad
+* Al escribir en la barra de búsqueda, vaya mostrando opciones de Campeones.
+
+#### Definición de terminado
+* Agregar input de busqueda
+* Barra de búsqueda fija
+* Que el input busque solo campeones
+* Input intuitivo
+
+### H.U 4
+### "Yo como usuario quiero ver el listado de campeones en orden alfabético y filtrados por rol para tener ideas de con quien puedo jugar mi  linea"
+
+#### Criterios de aceptación
+* Creación de botones para clasificar por roles
+* Organizar en orden alfabético
+* Que la barra de Opciones para encontrar campeones este siempre visible
+
+#### Definición de terminado
+* Función de filtrado para cada botón según el rol
+* Creación de select para organizar en orden alfabético o al inverso (A-Z / Z-A)
+* Creación y aplicación de Test para cada función
+
+### H.U 5
+### "Yo como usuario quiero ver clasificados a los campeones  por nivel de dificultad  para poder escoger al mejor y desarrollar mi juego"
+
+#### Criterios de aceptación
+* Lista de clasificación por dificultad
+* Ver la clasificación en las tarjetas
+
+#### Definición de terminado
+* Select para indicar nivel de dificultad
+* Funcionalidad de filtrado por dificultad
+* Test de funcionalidad
+
+### H.U 6
+### "Yo como usuario quiero ver el contenido en tarjetas para tener comodidad de ver los datos que me interesan"
+
+#### Criterios de aceptación
+* Tarjetas de Campeones que se muestre grande
+* Información de los Campeones reflejado en las Tarjetas
+* Información clara de los campeones
+* Visualizar Imagen del campeón
+
+#### Definición de terminado
+* Realizar filtrado de información mas relevante para el usuario (Tarjeta)
+* Ubicar a los campeones en tarjetas construidas en javascript
+* Maximizar tarjeta al darle click
+* Test de funcionalidad
+
+## Resultado final
+
+![VistaFinal](src/imgREADME/Final.png)
+![VistaFinal](src/imgREADME/Final1.png)
+![VistaTargetaFinal](src/imgREADME/TarjetaFinal.png)
+
+## Test
+
+![Test](src/imgREADME/Test.PNG)
+
+
+
 
 
 
