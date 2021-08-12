@@ -1,6 +1,8 @@
 ![Banner de la página](src/BannerPagina.png)
 
 # Data Lovers
+#### Link a proyecto
+[League Of Legends- DataLovers DL14 BOG003](https://camilaforer.github.io/BOG003-data-lovers/src/index.html)
 
 En este proyecto queremos mostrar una aplicación web responsive, capaz de visualizar y manipular data en este caso de League of Legends por medio de diversas funciones. 
 
