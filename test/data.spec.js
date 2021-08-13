@@ -25,8 +25,6 @@ describe('filterData', () => {
   })
  });
 
-
-
 describe('filterCards', () => {
   it('Es una funcion que filtra la data que va en las tarjetas', () => {
     expect(typeof filterCards).toBe('function');

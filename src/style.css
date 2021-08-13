@@ -3,8 +3,6 @@
 body{
     font-family: 'Rosario', sans-serif;
     background: linear-gradient(to bottom, #012227,#033338,#02545f)no-repeat;
-    
-
 }
 .show{
     display: flex !important;
@@ -28,8 +26,6 @@ aside{
 .sticky{
     top:20px;   
 }
-
-
 h1{
     color: white;
     text-align: center;

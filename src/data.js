@@ -34,8 +34,5 @@ export const filterCards= (data, name)=>{
    return dataLol
  };
  
-/*función compute o calcular, nos permitirá hacer cálculos estadísticos básicos para ser mostrados de acuerdo
- a la data proporcionada.*/
 
-// computeStats(data);
 
